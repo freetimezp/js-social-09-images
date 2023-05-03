@@ -1,11 +1,12 @@
 import React from 'react';
 
 import './ProfileSide.css';
+import LogoSearch from '../logoSearch/LogoSearch';
 
 const ProfileSide = () => {
     return (
         <div className='profileSide'>
-            ProfileSide
+            <LogoSearch />
         </div>
     );
 }
