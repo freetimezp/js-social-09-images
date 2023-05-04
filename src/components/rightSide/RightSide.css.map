@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"RightSide.css"}
+{"version":3,"sources":["RightSide.scss","RightSide.css"],"names":[],"mappings":"AAAA;EACI,aAAA;EACA,sBAAA;EACA,SAAA;ACCJ;ADCI;EACI,gBAAA;EACA,aAAA;EACA,8BAAA;ACCR;ADCQ;;EAEI,aAAA;EACA,cAAA;EACA,eAAA;ACCZ;ADCY;;EACI,2BAAA;ACEhB;ADGI;EACI,UAAA;EACA,YAAA;EACA,kBAAA;ACDR","file":"RightSide.css"}

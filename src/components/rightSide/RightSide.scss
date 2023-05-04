@@ -1,0 +1,28 @@
+.rightSide {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .navIcons {
+        margin-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+
+        img,
+        svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateY(-4px);
+            }
+        }
+    }
+
+    .r-button {
+        width: 80%;
+        height: 3rem;
+        align-self: center;
+    }
+}
