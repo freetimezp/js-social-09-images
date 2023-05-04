@@ -1,0 +1,49 @@
+.followersCard {
+    width: 100%;
+    border-radius: 0.7rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 15px;
+
+    .follower {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .item {
+            display: flex;
+            gap: 10px;
+
+            .followerImg {
+                width: 3.2rem;
+                height: 3.2rem;
+                border-radius: 50%;
+            }
+
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+
+                span {
+                    &:nth-of-type(1) {
+                        font-weight: bold;
+                    }
+
+                    &:nth-of-type(2) {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        .fc-button {
+            height: 2rem;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}
