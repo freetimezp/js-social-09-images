@@ -52,6 +52,7 @@ body {
   background: var(--buttonBg);
   transition: all 0.5s ease-in-out;
   cursor: pointer;
+  padding: 0.5rem 1rem;
 }
 
 .button:hover {

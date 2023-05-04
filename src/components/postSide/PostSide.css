@@ -1,1 +1,7 @@
-/*# sourceMappingURL=PostSide.css.map */
+.postSide {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100vh;
+  overflow: auto;
+}/*# sourceMappingURL=PostSide.css.map */
