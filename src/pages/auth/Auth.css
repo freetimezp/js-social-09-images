@@ -1,0 +1,78 @@
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 4rem;
+  position: relative;
+}
+.auth .a-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.auth .a-left img {
+  width: 4rem;
+  height: 4rem;
+}
+.auth .a-left .webname {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.auth .a-left .webname h1 {
+  font-size: 3rem;
+  background-color: red;
+  background-image: var(--buttonBg);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+.auth .a-left .webname h6 {
+  font-size: 0.85rem;
+  font-style: italic;
+}
+.auth .a-right .infoForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  background-color: var(--cardColor);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.auth .a-right .infoForm div {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.auth .a-right .infoForm div:nth-of-type(2) {
+  width: 100%;
+}
+.auth .a-right .infoForm .infoInput {
+  border: none;
+  outline: none;
+  background-color: var(--inputColor);
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+}
+.auth .a-right .infoForm .btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.auth .a-right .infoForm .btn-wrapper span {
+  font-size: 12px;
+  text-decoration: underline;
+}
+.auth .a-right .infoForm .btn-wrapper .info-button {
+  width: 6rem;
+  height: 2rem;
+}/*# sourceMappingURL=Auth.css.map */
