@@ -1,0 +1,40 @@
+.infoForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  background-color: var(--cardColor);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.infoForm div {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+}
+.infoForm div:nth-of-type(2) {
+  width: 100%;
+}
+.infoForm .infoInput {
+  border: none;
+  outline: none;
+  background-color: var(--inputColor);
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1;
+}
+.infoForm .btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.infoForm .btn-wrapper span {
+  font-size: 12px;
+  text-decoration: underline;
+}
+.infoForm .btn-wrapper .info-button {
+  width: 6rem;
+  height: 2rem;
+}/*# sourceMappingURL=ProfileModal.css.map */
