@@ -1,0 +1,14 @@
+.profile {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18rem auto 20rem;
+  gap: 1rem;
+}
+.profile .profile-center {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.profile .profileCard {
+  margin-top: 0;
+}/*# sourceMappingURL=Profile.css.map */
