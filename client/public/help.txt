@@ -1,3 +1,4 @@
 https://www.youtube.com/watch?v=WWhgssiyfwY
 https://fonts.google.com/
 https://mantine.dev/core/modal/
+https://www.mongodb.com/cloud/atlas/register
