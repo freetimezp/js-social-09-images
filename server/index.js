@@ -5,17 +5,21 @@ import AuthRoute from './Routes/AuthRoute.js';
 import UserRoute from './Routes/UserRoute.js';
 import PostRoute from './Routes/PostRoute.js';
 
+import cors from 'cors';
 import * as dotenv from 'dotenv';
 dotenv.config();
+
+const app = express();
 
 const user = process.env.NAME_MONGO_USER;
 const pass = process.env.PASS_MONGO_USER;
 const port = process.env.PORT_MONGO_SERVER;
 
 //server
-const app = express();
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
+app.use(cors());
+
 
 //connect to Mong db
 const query = "mongodb+srv://" + user + ":" + pass + "@cluster0.hi4nuw5.mongodb.net/SocialMedia?retryWrites=true&w=majority";
