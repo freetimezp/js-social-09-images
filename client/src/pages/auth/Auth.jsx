@@ -1,10 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './Auth.css';
 
 import Logo from '../../img/logo.png';
 
 const Auth = () => {
+    const [isSignUp, setIsSignUp] = useState(true);
+    const [data, setData] = useState({ firstname: '', lastname: '', username: '', password: '', confirmpass: '' });
+    const [confirmPass, setConfirmPass] = useState(true);
+
+    const handleChange = (e) => {
+        setData({ ...data, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (isSignUp) {
+            if (data.password !== data.confirmpass) {
+                setConfirmPass(false);
+            }
+        }
+    };
+
+    const resetForm = () => {
+        setConfirmPass(true);
+        setData({ firstname: '', lastname: '', username: '', password: '', confirmpass: '' })
+    };
+
     return (
         <div className='auth'>
             <div className="a-left">
@@ -15,54 +38,85 @@ const Auth = () => {
                 </div>
             </div>
 
-            <Login />
-        </div>
-    );
-}
+            <div className='a-right'>
+                <form className="infoForm authForm" onSubmit={handleSubmit}>
+                    <h3>{isSignUp ? "Sign Up" : "Login"}</h3>
 
-function Login() {
-    return (
-        <div className='a-right'>
-            <form className="infoForm loginForm">
-                <h3>Login</h3>
-                <div>
-                    <input type="text" placeholder='Username' className='infoInput' name='username' />
-                </div>
-                <div>
-                    <input type="text" placeholder='Password' className='infoInput' name='password' />
-                </div>
+                    {isSignUp && (
+                        <div>
+                            <input
+                                type="text"
+                                placeholder='First Name'
+                                className='infoInput'
+                                name='firstname'
+                                onChange={handleChange}
+                                value={data?.firstname}
+                            />
+                            <input
+                                type="text"
+                                placeholder='Last Name'
+                                className='infoInput'
+                                name='lastname'
+                                onChange={handleChange}
+                                value={data?.lastname}
+                            />
+                        </div>
+                    )}
 
-                <div className='btn-wrapper'>
-                    <span>Don't have an account?</span>
-                    <button className="button info-button" type="submit">Login</button>
-                </div>
-            </form>
-        </div>
-    );
-}
+                    <div>
+                        <input
+                            type="text"
+                            placeholder='Username'
+                            className='infoInput'
+                            name='username'
+                            onChange={handleChange}
+                            value={data?.username}
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="password"
+                            placeholder='Password'
+                            className='infoInput'
+                            name='password'
+                            onChange={handleChange}
+                            value={data?.password}
+                        />
+                        {isSignUp && (
+                            <input
+                                type="password"
+                                placeholder='Confirm Password'
+                                className='infoInput'
+                                name="confirmpass"
+                                onChange={handleChange}
+                                value={data?.confirmpass}
+                            />
+                        )}
+                    </div>
 
-function SignUp() {
-    return (
-        <div className='a-right'>
-            <form className="infoForm authForm">
-                <h3>Sign Up</h3>
-                <div>
-                    <input type="text" placeholder='First Name' className='infoInput' name='firstname' />
-                    <input type="text" placeholder='Last Name' className='infoInput' name='lastname' />
-                </div>
-                <div>
-                    <input type="text" placeholder='Username' className='infoInput' name='username' />
-                </div>
-                <div>
-                    <input type="text" placeholder='Password' className='infoInput' name='password' />
-                    <input type="text" placeholder='Confirm Password' className='infoInput' name="confirmpassword" />
-                </div>
+                    {isSignUp && (
+                        <span
+                            style={{
+                                display: confirmPass ? 'none' : 'block',
+                                color: 'red',
+                                alignSelf: 'flex-end',
+                                fontSize: '12px'
+                            }}
+                        >
+                            * Confirm password is not same
+                        </span>
+                    )}
 
-                <div className='btn-wrapper'>
-                    <span>Already have an account?</span>
-                    <button className="button info-button" type="submit">Sign up</button>
-                </div>
-            </form>
+                    <div className='btn-wrapper'>
+                        <span onClick={() => { setIsSignUp((prev) => !prev); resetForm(); }}>
+                            {isSignUp ? 'Already have an account! Login!' : "Don't have an account! Sign Up!"}
+                        </span>
+                        <button className="button info-button" type="submit">
+                            {isSignUp ? 'Sign Up' : 'Login'}
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     );
 }

@@ -71,6 +71,7 @@
 .auth .a-right .infoForm .btn-wrapper span {
   font-size: 12px;
   text-decoration: underline;
+  cursor: pointer;
 }
 .auth .a-right .infoForm .btn-wrapper .info-button {
   width: 6rem;
