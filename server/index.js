@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import AuthRoute from './Routes/AuthRoute.js';
 import UserRoute from './Routes/UserRoute.js';
 import PostRoute from './Routes/PostRoute.js';
+import UploadRoute from './Routes/UploadRoute.js';
 
 import cors from 'cors';
 import * as dotenv from 'dotenv';
@@ -20,7 +21,6 @@ app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 
-
 //connect to Mong db
 const query = "mongodb+srv://" + user + ":" + pass + "@cluster0.hi4nuw5.mongodb.net/SocialMedia?retryWrites=true&w=majority";
 mongoose.connect(
@@ -35,3 +35,4 @@ mongoose.connect(
 app.use('/auth', AuthRoute);
 app.use('/user', UserRoute);
 app.use('/post', PostRoute);
+app.use('/upload', UploadRoute);
