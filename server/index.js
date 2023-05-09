@@ -12,6 +12,10 @@ dotenv.config();
 
 const app = express();
 
+//serve images for public
+app.use(express.static('public'));
+app.use('/images', express.static("images"));
+
 const user = process.env.NAME_MONGO_USER;
 const pass = process.env.PASS_MONGO_USER;
 const port = process.env.PORT_MONGO_SERVER;
