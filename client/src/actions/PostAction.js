@@ -5,7 +5,9 @@ export const getTimelinePosts = (id) => async (dispatch) => {
 
     try {
         const { data } = await PostApi.getTimelinePosts(id);
-        dispatch({ type: "RETREIVING_SUCCESS", data: data });
+        if (data) {
+            dispatch({ type: "RETREIVING_SUCCESS", data: data });
+        }
     } catch (error) {
         console.log("Post action error");
         //console.log(error);

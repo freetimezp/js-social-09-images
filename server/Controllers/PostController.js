@@ -91,6 +91,7 @@ export const likePost = async (req, res) => {
 //get timeline posts
 export const getTimelinePosts = async (req, res) => {
     const userId = req.params.id;
+    //console.log(userId);
 
     try {
         const currentUserPosts = await PostModel.find({ userId: userId });

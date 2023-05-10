@@ -20,6 +20,7 @@ const PostShare = () => {
     const descRef = useRef();
     const { user } = useSelector((state) => state.AuthReducer.authData);
     const dispatch = useDispatch();
+    const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER;
 
     const onImageChange = (event) => {
         if (event.target.files && event.target.files[0]) {
@@ -65,7 +66,12 @@ const PostShare = () => {
 
     return (
         <div className='postShare'>
-            <img src={ProfileImage} alt="profile" className='postImg' />
+            <img src={user.profilePicture
+                ? serverPublic + user.profilePicture
+                : serverPublic + 'defaultProfile.png'}
+                alt="profile"
+                className='postImg'
+            />
 
             <div className='input-wrapper'>
                 <input type="text" placeholder="What's happening?" ref={descRef} required />

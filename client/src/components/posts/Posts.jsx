@@ -5,7 +5,6 @@ import './Posts.css';
 
 import Post from '../post/Post';
 import { getTimelinePosts } from '../../actions/PostAction';
-//import { PostsData } from '../../Data/PostsData';
 
 const Posts = () => {
     const dispatch = useDispatch();
