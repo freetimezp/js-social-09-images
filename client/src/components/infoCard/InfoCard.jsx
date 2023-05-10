@@ -8,7 +8,7 @@ import { UilPen } from '@iconscout/react-unicons';
 
 import * as UserApi from '../../api/UserRequest.js';
 import ProfileModal from '../profileModal/ProfileModal';
-import { logout } from '../../actions/AuthAction';
+import { logout } from '../../actions/AuthAction.js';
 
 const InfoCard = () => {
     const [modalOpened, setModalOpened] = useState(false);
